@@ -1,0 +1,149 @@
+/*
+ * =============================================================================
+ * CUSTOM STYLES FOR REACT-DATEPICKER
+ * =================================e============================================
+*/
+
+/* Change the main font to match the app */
+.react-datepicker {
+  font-family: sans-serif; /* Or your app's font */
+  border: 1px solid #e2e8f0; /* slate-200 */
+  border-radius: 0.75rem; /* rounded-xl */
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  background-color: #ffffff; /* white */
+}
+
+/* --- POINTER/ARROW --- */
+.react-datepicker__triangle {
+  display: none; /* We don't need the default triangle */
+}
+
+/* --- HEADER --- */
+.react-datepicker__header {
+  background-color: #f8fafc; /* slate-50 */
+  border-bottom: 1px solid #e2e8f0; /* slate-200 */
+  padding-top: 12px;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+/* --- NAVIGATION (PREV/NEXT MONTH) --- */
+.react-datepicker__navigation {
+  top: 16px;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: #475569; /* slate-600 */
+  border-width: 2px 2px 0 0;
+}
+.react-datepicker__navigation:hover .react-datepicker__navigation-icon::before {
+  border-color: #0f172a; /* slate-900 */
+}
+
+/* --- MONTH AND YEAR DISPLAY --- */
+.react-datepicker__current-month {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b; /* slate-800 */
+  padding-bottom: 8px;
+}
+
+/* --- DAY OF WEEK (Su, Mo, Tu...) --- */
+.react-datepicker__day-name {
+  color: #64748b; /* slate-500 */
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+/* --- INDIVIDUAL DAYS --- */
+.react-datepicker__day {
+  color: #334155; /* slate-700 */
+  transition: all 0.2s ease-in-out;
+  border-radius: 0.5rem; /* rounded-lg */
+}
+
+.react-datepicker__day:hover {
+  background-color: #f1f5f9; /* slate-100 */
+  border-radius: 0.5rem;
+}
+
+/* --- SELECTED & HIGHLIGHTED DAYS --- */
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range {
+  background-color: #fe4982;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.react-datepicker__day--selected:hover,
+.react-datepicker__day--in-selecting-range:hover,
+.react-datepicker__day--in-range:hover {
+  background-color: #e03a6d; /* A darker pink for hover */
+}
+
+/* Today's date but not selected */
+.react-datepicker__day--today {
+  font-weight: 700;
+  color: #fe4982;
+}
+
+/* --- Other States --- */
+.react-datepicker__day--keyboard-selected {
+  background-color: #f1f5f9; /* slate-100 */
+  color: #334155;
+}
+
+.react-datepicker__day--disabled {
+  color: #cbd5e1; /* slate-300 */
+}
+
+/*
+   * =============================================================================
+   * DARK MODE STYLES
+   * This works automatically with Tailwind's 'dark' class strategy.
+   * =============================================================================
+  */
+.dark .react-datepicker {
+  background-color: #1e293b; /* slate-800 */
+  border-color: #334155; /* slate-700 */
+}
+
+.dark .react-datepicker__header {
+  background-color: #334155; /* slate-700 */
+  border-bottom: 1px solid #475569; /* slate-600 */
+}
+
+.dark .react-datepicker__current-month {
+  color: #f1f5f9; /* slate-100 */
+}
+
+.dark .react-datepicker__navigation-icon::before {
+  border-color: #94a3b8; /* slate-400 */
+}
+.dark
+  .react-datepicker__navigation:hover
+  .react-datepicker__navigation-icon::before {
+  border-color: #e2e8f0; /* slate-200 */
+}
+
+.dark .react-datepicker__day-name {
+  color: #94a3b8; /* slate-400 */
+}
+
+.dark .react-datepicker__day {
+  color: #e2e8f0; /* slate-200 */
+}
+
+.dark .react-datepicker__day:hover {
+  background-color: #475569; /* slate-600 */
+}
+
+.dark .react-datepicker__day--disabled {
+  color: #475569; /* slate-600 */
+}
+
+.dark .react-datepicker__day--keyboard-selected {
+  background-color: #475569; /* slate-600 */
+  color: #e2e8f0;
+}
