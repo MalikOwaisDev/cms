@@ -63,7 +63,7 @@ app.get(/^(?!\/api).*/, (req, res) => {
 mongoose
   .connect(
     process.env.MONGO_URI ||
-      "mongodb+srv://owaisoff:MalikOwais@#$@cluster0.58ccyqw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+      "mongodb+srv://owaisoff:MalikOwais123@cluster0.58ccyqw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
   )
   .then(() => {
     const PORT = process.env.PORT || 4000;
