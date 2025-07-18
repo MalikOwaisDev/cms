@@ -61,7 +61,10 @@ app.get(/^(?!\/api).*/, (req, res) => {
 });
 
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(
+    process.env.MONGO_URI ||
+      "mongodb+srv://owaisoff:MalikOwais@#$@cluster0.58ccyqw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  )
   .then(() => {
     const PORT = process.env.PORT || 4000;
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
